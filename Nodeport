@@ -9,7 +9,7 @@ metadata:
 spec:
  containers:
  - name: c12
-   image: tomcat:9.0
+   image: Image name
    ports:
    - containerPort: 8080
 ---
@@ -25,9 +25,35 @@ spec:
   ports:
     - port: 80
  targetPort: 8080
-      nodePort: 30007
+    
 🔹 Step 2: Apply YAML
 
 kubectl apply -f nodeport.yaml
-      targetPort: 8080
+
+🌐 How to Access the Application
+
+Find your node IP:
+
+kubectl get nodes -o wide
+
+Then open in browser:
+
+http://<Node-IP>:30007
+
+
+⚠️ Common Mistakes 
+
+❌ 1. Namespace mismatch
+
+
+
+❌ 2. YAML formatting errors
+
+
+
+
+❌ 3. Wrong selector labels
+
+
+      
 
