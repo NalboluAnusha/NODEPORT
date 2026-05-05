@@ -3,7 +3,7 @@ Create a Pod and Service
 kind: Pod
 metadata:
  namespace: prod
- name: node1
+ name: node
  labels:
   app: myapp
 spec:
